@@ -28,6 +28,7 @@ Practicar conceptos de __Big Data & IA__ y demostrar la aplicación de pipelines
 
 #### Clonar el repositorio
 git clone https://github.com/tu-usuario/proyecto-superstore.git
+
 cd proyecto-superstore
 
 #### Crear entorno virtual
