@@ -2,7 +2,7 @@ import pandas as pd
 import os # Gestiona automáticamente las diferencias entre sistemas operativos como '/' en Linux/macOS o '\' en Windows
 
 # ----------------------------------------------------------------- #
-#    DIVIDIR EL DATASET ORIGINAL A Customers, Products y Orders    #
+#    DIVIDIR EL DATASET ORIGINAL A Customers, Products y Orders     #
 # ----------------------------------------------------------------- #
 
 # Ruta al dataset original
