@@ -50,17 +50,17 @@ pip install -r requirements.txt
 ### 4. 🚀 Ejecución del pipeline
 
 __1. Bronze (datos crudos)__
-python bronze/split_dataset.py  ---> Divide el dataset <br>
-python bronze/load_bronze.py
+<br> python bronze/split_dataset.py  ---> Divide el dataset
+<br> python bronze/load_bronze.py
 
 __2. Silver (datos limpios)__
-python silver/transform_silver.py
+<br> python silver/transform_silver.py
 
 __3. Gold (dataset final)__
-python gold/build_gold.py
+<br> python gold/build_gold.py
 
 __4. Visualización__
-python gold/visualize_gold.py
+<br> python gold/visualize_gold.py
 
 
 ### 5. 📊 Visualización
