@@ -24,7 +24,7 @@ def transform_silver():
     # Eliminar filas con null en la PK y filas duplicadas
     customers = customers.dropna(subset=["customer_id"]).drop_duplicates()
     products = products.dropna(subset=["product_id"]).drop_duplicates()
-    orders = orders.dropna(subset=["order_id"]).drop_duplicates()
+    orders = orders.dropna(subset=["order_id"]).drop_duplicates(subset=["order_id", "product_id"]) # Elimina solo casos donde se repite exactamente el mismo producto en la misma orden
 
     # Convertir fechas
     orders["order_date"] = pd.to_datetime(orders["order_date"])
