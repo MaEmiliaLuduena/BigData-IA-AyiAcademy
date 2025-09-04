@@ -51,6 +51,9 @@ for category in top_products["category"].unique(): # no repite categorias
     # plt.savefig(f"top_productos_{category}.png", dpi=300, bbox_inches="tight")
     plt.show()
 
+# Guardar tabla 'Top Productos por Categoria' en BD
+top_products.to_sql("kpi_top_products_by_category", engine, if_exists="replace", index=False)
+
 
 # ------------------------ #
 # 2. PRODUCTOS SIN VENTAS  #
@@ -77,6 +80,9 @@ plt.ylabel("Cantidad de productos sin ventas")
 # Guargar imagen
 # plt.savefig("productos_sin_ventas.png", dpi=300, bbox_inches="tight")
 plt.show()
+
+# Guardo tabla 'Productos No Vendidos' en BD
+unsold_products.to_sql("kpi_unsold_products", engine, if_exists="replace", index=False)
 
 # Mensaje informativo en consola
 if unsold_products.empty:
@@ -112,6 +118,9 @@ plt.ylabel("Ciudad")
 # plt.savefig("ciudades_mayor_ganancia.png", dpi=300, bbox_inches="tight")
 plt.show()
 
+# Guardo tabla 'Top Ciudades Mayor Ganancia' en BD
+top_cities.to_sql("kpi_top_cities", engine, if_exists="replace", index=False)
+
 
 # ------------------------------------ #
 # 4. CANTIDAD DE VENTAS POR CATEGORÍA  #
@@ -129,6 +138,9 @@ plt.ylabel("Cantidad de ventas")
 # Guargar imagen
 # plt.savefig("cantidad_de_ventas.png", dpi=300, bbox_inches="tight")
 plt.show()
+
+# Guardo tabla 'Cantidad de Ventas por Categoría' en BD
+qty_by_product_cat.to_sql("kpi_qty_by_category", engine, if_exists="replace", index=False)
 
 
 # --------------------------------------- #
@@ -160,6 +172,9 @@ for segment in top_customers["segment"].unique():
     # plt.savefig("clientes_rentables.png", dpi=300, bbox_inches="tight")
     plt.show()
 
+# Guardo tabla 'Clientes Más Rentables por Segmento' en BD
+top_customers.to_sql("kpi_top_customers", engine, if_exists="replace", index=False)
+
 # ------------------------------- #
 # 6. EVOLUCIÓN DE VENTAS POR AÑO  #
 # ------------------------------- #
@@ -185,6 +200,9 @@ plt.grid(True, linestyle="--", alpha=0.6)
 # plt.savefig("evolucion_ventas_x_anio.png", dpi=300, bbox_inches="tight")
 plt.show()
 
+# Guardo tabla 'Evolución de Ventas por Año' en BD
+sales_by_year.to_sql("kpi_sales_by_year", engine, if_exists="replace", index=False)
+
 
 # ------------------------------- #
 # 7. CORRELACIÓN ENTRE VARIABLES  #
@@ -203,3 +221,6 @@ plt.title("Mapa de Correlación entre Variables Numéricas", fontsize=14)
 # Guargar imagen
 # plt.savefig("correlacion_variables.png", dpi=300, bbox_inches="tight")
 plt.show()
+
+# Guardo tabla 'Correlación de Variables Numéricas' en BD
+corr_matrix.to_sql("kpi_correlation_matrix", engine, if_exists="replace", index=False)
