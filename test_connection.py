@@ -2,12 +2,13 @@ import pymysql
 
 # Pruebo la conexión con la base de datos
 try:
+    # Completar con los datos de tu bd
     conn = pymysql.connect(
-        host="localhost",
-        user="root",
-        password="1234",
+        host="tu_host",
+        user="tu_user",
+        password="tu_password",
         database="superstore_db",
-        port=3306
+        port=tu_puerto
     )
     print("✅ Conectado a MySQL correctamente")
 except Exception as e:
