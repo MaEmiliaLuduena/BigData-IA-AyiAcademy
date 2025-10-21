@@ -2,10 +2,11 @@
 from sqlalchemy import create_engine
 
 def get_engine():
-    user = "root"
-    password = "1234"
-    host = "localhost"
-    port = "3306"
+    # Completar con los datos de tu bd
+    user = ""
+    password = ""
+    host = ""
+    port = ""
     db = "superstore_db"
     
     engine = create_engine(f"mysql+pymysql://{user}:{password}@{host}:{port}/{db}")
