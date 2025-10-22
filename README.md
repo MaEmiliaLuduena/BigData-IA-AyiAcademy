@@ -27,7 +27,7 @@ Practicar conceptos de __Big Data & IA__ y demostrar la aplicación de pipelines
 ### 2. ⚙️ Instalación
 
 #### Clonar el repositorio
-git clone [https://github.com/tu-usuario/proyecto-superstore.git](https://github.com/MaEmiliaLuduena/BigData-IA-AyiAcademy.git)
+git clone https://github.com/MaEmiliaLuduena/BigData-IA-AyiAcademy.git
 
 cd proyecto-superstore
 
