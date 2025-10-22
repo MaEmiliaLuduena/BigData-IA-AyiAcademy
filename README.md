@@ -72,5 +72,6 @@ También se guardan como imágenes si descomentás las líneas correspondientes.
 
 Todas las librerías necesarias están listadas en requirements.txt.
 Si necesitás actualizarlo luego de instalar nuevas dependencias:
+
 pip freeze > requirements.txt
 
